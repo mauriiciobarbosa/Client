@@ -34,9 +34,9 @@ public class ClientBO {
 	private PropertyChangeSupport listener;
 	
 	
-	public ClientBO(ClientController controller) {
-		listener = new PropertyChangeSupport(this);
-		listener.addPropertyChangeListener(controller);
+	public ClientBO() {
+		listener = new PropertyChangeSupport(ClientController.getInstance());
+		listener.addPropertyChangeListener(ClientController.getInstance());
 	}
 
 	

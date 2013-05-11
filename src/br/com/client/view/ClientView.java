@@ -32,8 +32,8 @@ public class ClientView extends javax.swing.JFrame {
     /**
      * Creates new form ClientView
      */
-    public ClientView(ClientController controller) {
-        this.controller = controller;
+    public ClientView() {
+        // this.controller = controller;
         initComponents();
     }
     /**

@@ -39,12 +39,11 @@ public class Main {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-            	ClientController controller = new ClientController();
-            	ClientBO clientBO           = new ClientBO(controller);
-            	ClientView clientView       = new ClientView(controller);
+            	ClientBO clientBO           = new ClientBO();
+            	ClientView clientView       = new ClientView();
             	
-            	controller.addClientBO(clientBO);
-            	controller.addclientView(clientView);
+            	ClientController.getInstance().addClientBO(clientBO);
+            	ClientController.getInstance().addclientView(clientView);
             	
             	clientView.setVisible(true);
             }

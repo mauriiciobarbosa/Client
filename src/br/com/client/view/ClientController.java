@@ -22,6 +22,17 @@ public class ClientController implements PropertyChangeListener {
 	 * Objeto que armazena o "modelo" interessado em enviar e receber notificacoes de atualizacao.
 	 */
 	private ClientBO 	registreredClientBO;
+	private static ClientController instance;
+	
+	private ClientController() {}
+	
+	public static ClientController getInstance() {
+		if (instance == null)
+			instance = new ClientController();
+		
+		return instance;
+	}
+	
 	/**
 	 * Metodo responsavel por adicionar views interessadas em receber notificacoes de atualizacao.
 	 * Nesse caso, sera somente uma view do tipo ClientView.
